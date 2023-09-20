@@ -15,7 +15,7 @@
                     <div class="col-xl-10">
                         <input type="text" class="form-control" id="validationUsername" name="validationUsername"
                         aria-describedby="EmptyUsername" required>
-                        <div class="invalid-feedback" id=""EmptyUsername>
+                        <div class="invalid-feedback" id="EmptyUsername">
                         </div>
                     </div>
                 </div>
@@ -47,12 +47,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>
         (function () {
@@ -61,6 +55,7 @@
             var myEmail = document.querySelector("#validationEmail");
             var myPassword = document.querySelector("#validationPassword");
             const spacePattern = /^\S*$/;
+
             myUsername.addEventListener('blur',controlUsername);
             myEmail.addEventListener('blur',controlEmail);
             myPassword.addEventListener('blur',controlPassword);
@@ -132,7 +127,7 @@
                     return false;
                 }
             }
-            var myForms = document.querySelector(".needs-validation");
+            var myForms = document.querySelector("form.needs-validation");
             myForms.addEventListener('submit', function (e) {
                     if (!myForms.checkValidity() || !controlUsername() || !controlEmail() || !controlPassword()
                     ) {
