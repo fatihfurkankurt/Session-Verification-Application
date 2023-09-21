@@ -11,37 +11,38 @@
         <div class="row mt-5">
             <div class="col-xl-8">
                 <form class="needs-validation" novalidate>
-                    <div class="row mb-4"><label for="validationUsername" class="form-label col-xl-2">Kullanıcı Adı</label>
-                    <div class="col-xl-10">
-                        <input type="text" class="form-control" id="validationUsername" name="validationUsername"
-                        aria-describedby="EmptyUsername" required>
-                        <div class="invalid-feedback" id="EmptyUsername">
+                    <div class="row mb-4">
+                        <label for="validationUsername" class="form-label col-xl-2">Kullanıcı Adı</label>
+                        <div class="col-xl-10">
+                            <input type="text" class="form-control" id="validationUsername" name="validationUsername"
+                            aria-describedby="EmptyUsername" required>
+                            <div class="invalid-feedback" id="EmptyUsername">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="validationEmail" class="form-label col-xl-2">E-posta</label>
-                    <div class="col-xl-10">
-                        <input type="email" class="form-control" id="validationEmail" name="validationEmail"
-                        aria-describedby="EmptyEmail" required>
-                        <div class="invalid-feedback" id="EmptyEmail">
-                            Lütfen epostanızı tekrar kontrol edin.
+                    <div class="row mb-3">
+                        <label for="validationEmail" class="form-label col-xl-2">E-posta</label>
+                        <div class="col-xl-10">
+                            <input type="email" class="form-control" id="validationEmail" name="validationEmail"
+                            aria-describedby="EmptyEmail" required>
+                            <div class="invalid-feedback" id="EmptyEmail">
+                                Lütfen e-postanızı tekrar kontrol edin.
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="validationPassword" class="form-label col-xl-2">Şifreniz</label>
-                    <div class="col-xl-10">
-                        <input type="password" class="form-control" id="validationPassword" name="validationPassword" required>
-                        <div class="invalid-feedback">
-                            Lütfen harf, rakam ve özel karakter içeren bir şifre giriniz.
+                    <div class="row mb-3">
+                        <label for="validationPassword" class="form-label col-xl-2">Şifreniz</label>
+                        <div class="col-xl-10">
+                            <input type="password" class="form-control" id="validationPassword" name="validationPassword" required>
+                            <div class="invalid-feedback">
+                                Şifre en az bir küçük harf, bir büyük harf, bir rakam ve bir özel karakter içermelidir. En az 8 karakter olmalıdır. Özel karakterler: !@#$%^&* 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="offset-xl-2 col-xl-10"><button class="btn btn-success d-block w-100" type="submit">Gönder</button>
+                    <div class="row">
+                        <div class="offset-xl-2 col-xl-10"><button class="btn btn-success d-block w-100" type="submit">Gönder</button>
+                        </div>
                     </div>
-                </div>
                 </form>
             </div>
         </div>
@@ -117,7 +118,7 @@
                     } else {
                         myPassword.classList.remove("is-valid");
                         myPassword.classList.add("is-invalid");
-                        myPasswordError.innerHTML = "Lütfen harf, rakam ve özel karakter içeren bir şifre giriniz.";
+                        myPasswordError.innerHTML = "Şifre en az bir küçük harf, bir büyük harf, bir rakam ve bir özel karakter içermelidir. En az 8 karakter olmalıdır. Özel karakterler: !@#$%^&* ";
                         return false;
                     }
                 } else {
